@@ -8,7 +8,7 @@
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi",
-    "prestart": "yarn run build"
+    "prestart": "yarn run build --no-optimization"
   },
   "devDependencies": {},
   "dependencies": {
