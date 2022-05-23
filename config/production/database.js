@@ -3,7 +3,6 @@ const config = parse(process.env.DATABASE_URL);
 module.exports = ({ env }) => ({
   connection: {
     client: "postgres",
-
     connection: {
       host: config.host,
       port: config.port,
@@ -13,9 +12,9 @@ module.exports = ({ env }) => ({
       ssl: {
         rejectUnauthorized: env.bool("DATABASE_SSL_SELF", false), // For self-signed certificates
       },
-    },
-    options: {
-      ssl: env.bool("DATABASE_SSL", false),
+      options: {
+        ssl: env.bool("DATABASE_SSL", false),
+      },
     },
     debug: false,
   },
