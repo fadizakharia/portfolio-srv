@@ -8,7 +8,7 @@
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi",
-    "preinstall": "rm -r ./build"
+    "prestart": "rm -r ./build && yarn run build"
   },
   "devDependencies": {},
   "dependencies": {
