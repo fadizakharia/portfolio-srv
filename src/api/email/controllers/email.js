@@ -20,7 +20,7 @@ module.exports = {
       });
       return ctx.send("your email has been successfully sent");
     } catch (err) {
-      return ctx.internalServerError("Something went wrong!");
+      return ctx.internalServerError("Something went wrong!" + err);
     }
   },
 };
